@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="in"><head>
+    <title>ODDO - Login and Register Form HTML5 Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <!-- External CSS libraries -->
+    <link type="text/css" rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="{% static 'fonts/flaticon/font/flaticon.css' %}">
+
+
+    <!-- Favicon icon -->
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+
+    <!-- Custom Stylesheet -->
+    <link type="text/css" rel="stylesheet" href="{% static 'css/loginPage/style.css' %}">
+
+
+<script src="moz-extension://e588d71c-a92c-4c3c-b38c-3e6a3c2b03f3/assets/prompt.js"></script></head>
+<body id="top">
+<div class="page_loader"></div>
+
+<!-- Login 4 start -->
+<div class="login-4">
+    <div class="container-fluid">
+        <div class="row login-box">
+            <div class="col-lg-6 form-section">
+                <div class="form-inner">
+                    <a href="login-4.html" class="logo">
+                        <img src="assets/img/logos/logo.png" alt="logo">
+                    </a>
+                    <h3>
+                        Sign Into Your Account
+                    </h3>
+                    <div class="alert alert-danger alert-dismissible fade show d-none" role="alert">
+                        <strong>Sorry,</strong> Something went wrong!
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    <form action="" method="POST" id="commonForm" novalidate="novalidate">
+                        {% csrf_token %}
+                        <div class="form-group position-relative clearfix">
+                            <input name="email" type="email" class="form-control" placeholder="Email Address" aria-label="Email Address">
+                            <div class="login-popover login-popover-abs" data-bs-toggle="popover" data-bs-trigger="hover" title="" data-bs-content="And here's some amazing content. It's very engaging. Right?" data-bs-original-title="Clarification">
+                                <i class="fa fa-info-circle"></i>
+                            </div>
+                        </div>
+                        <div class="form-group clearfix position-relative password-wrapper">
+                            <input name="password" type="password" class="form-control" autocomplete="off" placeholder="Password" aria-label="Password">
+                            <i class="fa fa-eye password-indicator"></i>
+                        </div>
+                        <div class="form-group mb-0 clearfix">
+                            <button type="submit" class="btn btn-lg btn-primary btn-theme">Login</button>
+                            <a href="{% url 'wellsip:forgot-password' %}" class="forgot-password float-end">Forgot Password</a>
+                        </div>
+                        <div class="extra-login clearfix">
+                            <span>Or Login With</span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <ul class="social-list">
+                            <li><a href="{% url 'social:begin' 'google-oauth2' %}" class="google-color"><i class="fa fa-google google-i"></i><span>Google</span></a></li>
+                        </ul>
+                    </form>
+                    <div class="clearfix"></div>
+                    <p>Don't have an account? <a href="{% url 'wellsip:register-screen' %}" class="thembo"> Register here</a></p>
+                </div>
+            </div>
+<!--            set backgroud image-->
+            <div class="col-lg-6 bg-img clip-home h-100" style="background-image: url('{% static 'img/bg/bg-login.jpg' %}');"></div>
+        </div>
+    </div>
+</div>
+<!-- Login 4 end -->
+
+<!-- External JS libraries -->
+<script src="{% static 'js/loginPage/jquery-3.6.0.min.js' %}"></script>
+<script src="{% static 'js/loginPage/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'js/loginPage/jquery.validate.min.js' %}"></script>
+<script src="{% static 'js/loginPage/app.js' %}"></script>
+<!-- Custom JS Script -->
+
+
+</body></html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .stylish-text {
+            font-family: 'Poppins', sans-serif; /* Modern font */
+            font-size: 1.5rem; /* Larger text */
+            font-weight: bold; /* Bold for emphasis */
+            color: #000; /* Black color */
+            text-transform: uppercase; /* Uppercase for impact */
+            letter-spacing: 0.5px; /* Space between letters */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+        }
+        .juices-container {
+            width: 220px; /* Adjust as needed */
+            height: 250px; /* Adjust as needed */
+            overflow: hidden; /* Prevent overflow */
+            display: inline-block; /* Keep it inline */
+            border-radius: 50px;
+        }
+        sub-juices-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure proper scaling */
+            transition: transform 0.9s ease-in-out;
+        }
+        .sub-juices-img:hover {
+            transform: scale(1.2); /* Zoom effect */
+        }
+
+        .item-grow {
+            flex-grow: 1; /* Expands to fill space */
+        }
+        .main-juices-img {
+            height: 80vh;
+            border-radius: 15px;
+        }
+        .sub-juices-img {
+            height: 30vh;
+
+        }
+        .top-img-container {
+            height: 100vh; /* Full screen height */
+            position: relative;
+            background-image: url('{% static "img/bg/bg-fruits.png" %}');
+            background-size: cover; /* Ensures it covers the entire div */
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .signup-header {
+            font-family: 'Anton';
+            font-weight: 400;
+            font-size: 40px;
+        }
+
+
+
+\*
+        .top-img-container::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+}
+        */
+
+
+
+
+    </style>
+
+    <link type="text/css" rel="stylesheet" href="{% static 'css/home_page/nav-header.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/sweetalerts/sweetalerts.css' %}">
+</head>
+<body>
+<!--<h1>Logged in as {{request.user.username}}.</h1>-->
+<!--<button onclick="showCustomAlert('Are you sure?', 'You will be logged out!', 'warning', 'Yes, Logout!', function() {-->
+<!--    document.getElementById('logout-form').submit();-->
+<!--})">Logout</button>-->
+
+<!--<form id="logout-form" action="{% url 'wellsip:logout' %}" method="post" style="display: none;">-->
+<!--    {% csrf_token %}-->
+<!--</form>-->
+<div class="top-img-container"></div>
+<div class="container mt-4">
+    <div class="nav-header d-flex justify-content-between align-items-center">
+        <div class="fw-bold fs-4">🚀 Logo</div>
+        <div>
+            <div>📦 My hee ders</div>
+            <div>🔄 Subscriptions</div>
+        </div>
+        <div class="subscribe-btn">Subscribe Now</div>
+    </div>
+</div>
+<div class="p-3 mt-5 d-flex justify-content-evenly">
+    <img class="main-juices-img" src="{% static 'img/juices/img.png' %}" />
+    <div class="item-grow d-flex flex-column justify-content-center gap-1">
+        <div class="py-2 px-3 d-flex justify-content-evenly" style="background-color:white">
+            <div class="">
+                    <div class="juices-container">
+                        <img class="sub-juices-img" src ="{% static 'img/juices/img_1.png' %}" />
+                    </div>
+                <div class="text-center p-2 fs-5">Strawberry Juice</div>
+            </div>
+            <div class="">
+                    <div class="juices-container">
+                        <img class="sub-juices-img" src ="{% static 'img/juices/img_1.png' %}" />
+                    </div>
+                <div class="text-center p-2 fs-5">Strawberry Juice</div>
+            </div>
+            <div class="">
+                    <div class="juices-container">
+                        <img class="sub-juices-img" src ="{% static 'img/juices/img_1.png' %}" />
+                    </div>
+                <div class="text-center p-2 fs-5">Strawberry Juice</div>
+            </div>
+            <div class="">
+                    <div class="juices-container">
+                        <img class="sub-juices-img" src ="{% static 'img/juices/img_1.png' %}" />
+                    </div>
+                <div class="text-center p-2 fs-5 stylish-text">Strawberry<br> Juice</div>
+            </div>
+
+
+        </div>
+        <div class="py-2 px-3 d-flex justify-content-evenly">
+            <div class="">
+                    <div class="juices-container">
+                        <img class="sub-juices-img" src ="{% static 'img/juices/img_1.png' %}" />
+                    </div>
+                <div class="text-center p-2 fs-5">Strawberry Juice</div>
+            </div>
+            <div class="">
+                    <div class="juices-container">
+                        <img class="sub-juices-img" src ="{% static 'img/juices/img_1.png' %}" />
+                    </div>
+                <div class="text-center p-2 fs-5">Strawberry Juice</div>
+            </div>
+            <div class="">
+                    <div class="juices-container">
+                        <img class="sub-juices-img" src ="{% static 'img/juices/img_1.png' %}" />
+                    </div>
+                <div class="text-center p-2 fs-5">Strawberry Juice</div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="p-3">
+    <div style="position: relative; width: 100%;background-color:green;height:500px;overflow:hidden;" class="d-flex justify-content-center align-items-start">
+        <!-- Left Image -->
+        <img style="position: absolute; top: -10px; left: -50px; height: 200px;z-index:2;" src="{% static 'img/home/img.png' %}" alt="Left Image"/>
+
+        <!-- Centered Text -->
+        <div>
+            <div style="position: relative; z-index: 1;color:white;" class="signup-header">Sign Up for Exclusive Offers Both Inside and Outside</div>
+            <div></div>
+        </div>
+
+
+
+        <!-- Right Image -->
+        <img style="position: absolute; top: 0; right: -20px; height: 200px;z-index:2;" src="{% static 'img/home/img_1.png' %}" alt="Right Image"/>
+    </div>
+</div>
+</body>
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    function showCustomAlert(title, text, icon, confirmButtonText, callback) {
+        Swal.fire({
+            title: title,
+            text: text,
+            icon: icon,
+            showCancelButton: true,
+            confirmButtonColor: "#ff4b5c",
+            cancelButtonColor: "#17a2b8",
+            confirmButtonText: "<b>" + confirmButtonText + "</b>",
+            cancelButtonText: "<b>Cancel</b>",
+            background: "#1e1e2f",
+            color: "#fff",
+            iconColor: "#ffcc00",
+            customClass: {
+                popup: "swal2-popup-custom",  // Apply custom styling
+                confirmButton: "swal2-confirm-custom",  // Round confirm button
+                cancelButton: "swal2-cancel-custom"  // Round cancel button
+            },
+            showClass: {
+                popup: "animate__animated animate__fadeInDown"
+            },
+            hideClass: {
+                popup: "animate__animated animate__fadeOutUp"
+            }
+        }).then((result) => {
+            if (result.isConfirmed && callback) {
+                callback();
+            }
+        });
+    }
+</script>
+
+
+
+</html>

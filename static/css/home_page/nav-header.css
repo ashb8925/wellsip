@@ -1,0 +1,57 @@
+/* 🍊 Juicy Theme Header */
+        .nav-header {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 1200px;
+            background: linear-gradient(135deg, #ff9f1a, #ff6b81); /* Mango & Berry */
+            padding: 2rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(255, 111, 97, 0.3),
+                        0 5px 10px rgba(255, 159, 26, 0.2); /* Juicy Glow */
+            color: white;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .nav-header:hover {
+            box-shadow: 0 12px 30px rgba(255, 111, 97, 0.4),
+                        0 6px 12px rgba(255, 159, 26, 0.25);
+        }
+
+        .nav-header div {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .nav-header div div {
+            cursor: pointer;
+            font-weight: 600;
+            color: white;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .nav-header div div:hover {
+            transform: scale(1.1);
+            text-shadow: 0px 2px 5px rgba(255, 255, 255, 0.7);
+        }
+
+        /* 🍉 Juicy Button */
+        .subscribe-btn {
+            background: linear-gradient(135deg, #ff4757, #ff6b6b);
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 10px rgba(255, 71, 87, 0.4);
+        }
+
+        .subscribe-btn:hover {
+            background: linear-gradient(135deg, #ff6b6b, #e84118);
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(255, 71, 87, 0.5);
+        }

@@ -1,0 +1,12 @@
+        /* Make the popup rounded */
+.swal2-popup-custom {
+    border-radius: 20px !important;  /* Rounded corners */
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Optional: Slight border */
+    box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.2); /* Soft glow effect */
+}
+
+/* Round the confirm and cancel buttons */
+.swal2-confirm-custom, .swal2-cancel-custom {
+    border-radius: 25px !important;  /* More rounded buttons */
+    padding: 10px 20px; /* Better spacing */
+}
